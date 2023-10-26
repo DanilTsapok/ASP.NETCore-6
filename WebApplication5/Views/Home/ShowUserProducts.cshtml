@@ -1,0 +1,34 @@
+﻿@using WebApplication5.Models.ViewModels
+@model ProductsViewModel
+
+<h2>👤: @Model.Products.ToList()[0].User.Name</h2>
+
+<table class="table">
+    @for(int i = 0; i< Model.Products.Count(); i++)
+    {
+        var item = Model.Products.ElementAt(i);
+        if(item !=null)
+        {
+            <form asp-action="ChangeProducts" method="post">
+            <tr>
+                <td>
+                    <label> ID</label>
+                    <input type="hidden" asp-for="@item.Id" value="@item.Id" name="Id" class="form-control" />
+                    <input disabled value="@item.Id"  class="input"/>
+                </td>
+                <td>
+                    <label>Product Name</label>
+                    <input asp-for="@item.Name" value="@item.Name" name="Name" class="input" />
+                </td>
+                <td>
+                    <label>Product Description</label>
+                    <input asp-for="@item.Description" value="@item.Description" name="Description" class="input" />
+                </td>
+                <td class="text-center">
+                    <button type="submit" class="btn btn-danger">Save Changes</button>
+                </td>
+            </tr>
+            </form>
+        }
+    }
+</table>

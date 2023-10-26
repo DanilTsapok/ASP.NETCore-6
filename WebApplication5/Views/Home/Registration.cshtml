@@ -1,0 +1,27 @@
+﻿@{
+    Layout = null;
+}
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<form method="post" asp-action="AddUser" asp-controller="Home">
+    <style>
+        .registration{
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            flex-direction:column;
+            height: 100vh;
+            gap: 10px
+        }
+    </style>
+    <div class="registration">
+        <h1>Registration</h1>
+    <input name="Name" type="text" placeholder="Name" class="input"/>
+    <input name="Age" type="text" placeholder="Age" class="input" />
+    <input name="Password" type="password" placeholder="Password" class="input" />
+    <input name="numOfProducts" placeholder="Num of products" class="input" />
+    <button type="submit"  class = "btn btn-danger">Next</button>
+    </div>
+    
+ 
+</form>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

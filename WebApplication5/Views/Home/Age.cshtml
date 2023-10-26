@@ -1,0 +1,18 @@
+﻿
+<style>
+    .age{
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        flex-direction:column;
+        height: 100vh;
+        overflow: hidden;
+        }
+</style>
+<div class="age">
+
+    <h1>Тобі немає більше 16 років</h1>
+    <form method="post" asp-action="Registration" asp-controller="Home">
+        <input type="submit" value="Спробувати ще раз" class="btn btn-danger"/>
+    </form>
+</div>
